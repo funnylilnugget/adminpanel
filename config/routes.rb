@@ -1,0 +1,21 @@
+Rails.application.routes.draw do
+  get 'pages/home'
+  get 'pages/about'
+  get 'cohorts/new'
+  get 'cohorts/edit'
+  get 'cohorts/index'
+  get 'cohorts/show'
+  get 'courses/new'
+  get 'courses/edit'
+  get 'courses/index'
+  get 'courses/show'
+  get 'teachers/new'
+  get 'teachers/edit'
+  get 'teachers/index'
+  get 'teachers/show'
+  get 'students/new'
+  get 'students/edit'
+  get 'students/index'
+  get 'students/show'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
