@@ -1,2 +1,13 @@
-<h1>Courses#new</h1>
-<p>Find me in app/views/courses/new.html.erb</p>
+<h1>U.A. High School Course Registration</h1>
+
+  <%= form_for (@course) do |f| %>
+
+  <h5><%= f.label :name %></h5>
+  <%= f.text_field :name %><br>
+
+  <h5><%= f.label :class_hours %></h5>
+  <%= f.number_field :class_hours %><br>
+
+<%= f.submit "Create Course" %>
+
+<% end %>
