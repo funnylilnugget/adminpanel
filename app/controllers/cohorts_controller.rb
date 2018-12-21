@@ -25,7 +25,7 @@ class CohortsController < ApplicationController
   private
 
   def cohorts_params
-    params.require(:cohort).permit(:name, :start_date, :end_date, :teacher_id, :student_id, :course_id)
+    params.require(:cohort).permit(:name, :start_date, :end_date, :teacher_id, {student_ids: []}, :course_id)
   end
 
 
