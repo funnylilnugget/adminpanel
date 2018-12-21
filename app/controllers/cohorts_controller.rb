@@ -14,12 +14,14 @@ class CohortsController < ApplicationController
   end
 
   def edit
+    @cohort = Cohort.find(params[:id])
   end
 
   def index
   end
 
   def show
+    @cohort = Cohort.find(params[:id])
   end
 
   private

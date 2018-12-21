@@ -1,2 +1,14 @@
-<h1>Cohorts#show</h1>
-<p>Find me in app/views/cohorts/show.html.erb</p>
+
+<h1><%=@cohort.name%></h1>
+
+<p>Start Date: <%=@cohort.start_date%></p>
+<p>End Date: <%=@cohort.end_date%></p>
+<p>Instructor: <%=@cohort.teacher_id%></p>
+<p>Course: <%=@cohort.course_id%></p>
+
+<p>Students: </p>
+<ol>
+  <%@cohort.students.each do |student|%>
+  <li><%=student.hero_name%></li>  
+  <%end%>
+</ol>
