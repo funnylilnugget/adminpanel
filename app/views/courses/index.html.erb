@@ -1,2 +1,6 @@
-<h1>Courses#index</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
+<% @course.each do |s| %>
+  <table>
+    <tr>
+      <h5><%= s.name %></h5>
+      <h3><%= link_to "Edit", courses_path %></h3></tr>
+    <% end %>

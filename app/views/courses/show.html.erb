@@ -1,2 +1,6 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+
+<h1><%=@course.name%></h1>
+
+<p>Course Hours: <%=@course.class_hours%></p>
+
+<%= link_to "Home", root_path %> 

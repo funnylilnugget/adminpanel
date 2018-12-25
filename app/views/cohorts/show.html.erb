@@ -3,12 +3,12 @@
 
 <p>Start Date: <%=@cohort.start_date%></p>
 <p>End Date: <%=@cohort.end_date%></p>
-<p>Instructor: <%=@cohort.teacher_id%></p>
+<p>Teacher: <%=@cohort.teacher.first_name%></p>
 <p>Course: <%=@cohort.course_id%></p>
 
 <p>Students: </p>
 <ol>
   <%@cohort.students.each do |student|%>
-  <li><%=student.hero_name%></li>  
+  <li><%=student.hero_name%></li>
   <%end%>
 </ol>

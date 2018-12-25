@@ -1,4 +1,6 @@
 <% @cohort.each do |s| %>
-
-<h2><%= s.name %><h2>
- <% end %>
+  <table>
+    <tr>
+      <h5><%= s.name %></h5>
+      <h3><%= link_to "Edit", cohorts_path %></h3></tr>
+    <% end %>

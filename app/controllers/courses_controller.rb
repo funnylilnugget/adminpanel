@@ -14,18 +14,23 @@ class CoursesController < ApplicationController
   end
 
   def edit
+    @course = Course.find(params[:id])
   end
 
   def index
+    @course = Course.all
   end
 
   def show
+    @course = Course.find(params[:id])
   end
 
   private
 
   def courses_param
-    params.require(:course).permit(:name, :class_hours, :cohort_id)
+    params.require(:course).permit(:name,
+                                   :class_hours,
+                                   :cohort_id)
   end
 
 
