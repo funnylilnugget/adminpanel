@@ -1,2 +1,23 @@
-<h1>Teachers#index</h1>
-<p>Find me in app/views/teachers/index.html.erb</p>
+<table>
+<tr>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Hero Name</th>
+  <th>Quirk</th>
+  <th>Age</th>
+  <th>Salary</th>
+  <th>Education</th>
+  </tr>
+  <% @teacher.each do |s| %>
+    <tr>
+      <td><%= s.first_name %></td>
+      <td><%= s.last_name %></td>
+      <td><%= s.hero_name %></td>
+      <td><%= s.quirk %></td>
+      <td><%= s.age %></td>
+      <td><%= s.salary %></td>
+      <td><%= s.education %></td>
+      <td><a href="/teachers/<%=s.id%>">View Teacher</a></td>
+    </tr>
+    <% end %>
+</table>

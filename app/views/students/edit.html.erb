@@ -1,2 +1,27 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
+<h1> Edit <%= @student.first_name %> <%= @student.last_name %> </h1>
+<%= form_for (@student) do |f| %>
+
+<p><%= f.label :first_name %></p>
+<%= f.text_field :first_name %><br>
+
+<p><%= f.label :last_name %></p>
+<%= f.text_field :last_name %><br>
+
+<p><%= f.label :age %></p>
+<%= f.number_field :age %><br>
+
+
+<p><%= f.label :hero_name %></p>
+<%= f.text_field :hero_name %><br>
+
+<p><%= f.label :quirk %></p>
+<%= f.text_field :quirk %><br>
+
+<p><%= f.label :education %></p>
+<%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
+
+
+
+<%= f.submit "Edit Student" %>
+
+<% end %>

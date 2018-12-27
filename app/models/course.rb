@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
-  validates :name, :class_hours, presence: true
-  belongs_to :cohort, optional: true
+  validates :name, presence: true
+  validates :class_hours, numericality: {greater_than: 0}, presence: true
+    has_many :cohorts
 end

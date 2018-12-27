@@ -1,9 +1,12 @@
 <h1> Edit <%= @cohort.name %> </h1>
 <%= form_for (@cohort) do |f| %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
+
   <%= f.label :start_date %>
   <%= f.date_field :start_date %>
+
   <%= f.label :end_date %>
   <%= f.date_field :end_date %>
 

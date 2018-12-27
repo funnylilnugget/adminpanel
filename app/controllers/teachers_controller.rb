@@ -25,6 +25,12 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
   end
 
+  def update
+    @teacher = Teacher.find(params[:id])
+    @teacher.update(teachers_params)
+    redirect_to @teacher
+  end
+
   private
 
   def teachers_params

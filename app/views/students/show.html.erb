@@ -1,2 +1,9 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1>U.A. Student Information</h1>
+
+<p>Student Name: <%=@student.first_name%> <%=@student.last_name%></p>
+<p>Hero Name: <%=@student.hero_name%>
+<p>Age: <%=@student.age%></p>
+<p>Quirk: <%=@student.quirk%></p>
+<p>Education: <%=@student.education%></p>
+
+<%= link_to "Home", root_path %>

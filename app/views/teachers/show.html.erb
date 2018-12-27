@@ -1,2 +1,15 @@
-<h1>Teachers#show</h1>
-<p>Find me in app/views/teachers/show.html.erb</p>
+<h1>U.A. Teacher Information</h1>
+
+<p>Teacher Name:
+  <%=@teacher.first_name%>
+  <%=@teacher.last_name%></p>
+<p>Hero Name:
+  <%=@teacher.hero_name%>
+  <p>Age:
+    <%=@teacher.age%></p>
+  <p>Quirk:
+    <%=@teacher.quirk%></p>
+  <p>Education:
+    <%=@teacher.education%></p>
+
+  <%= link_to "Home", root_path %>

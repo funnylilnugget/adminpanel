@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(courses_param)
+    @course = Course.new(courses_params)
     if @course.valid?
       @course.save
       redirect_to @course
@@ -25,9 +25,15 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
   end
 
+  def update
+    @course = Course.find(params[:id])
+    @course.update(courses_params)
+    redirect_to @course
+  end
+
   private
 
-  def courses_param
+  def courses_params
     params.require(:course).permit(:name,
                                    :class_hours,
                                    :cohort_id)
