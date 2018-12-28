@@ -13,5 +13,5 @@
     <%=@teacher.education%></p>
 
   <%= link_to "Home", root_path %>
-  <a href="/teachers/<%=s.id%>/edit">View</a>
+  <a href="/teachers/<%=@teacher.id%>/edit">View</a>
   <%= link_to "Delete", teacher_path(@teacher), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>

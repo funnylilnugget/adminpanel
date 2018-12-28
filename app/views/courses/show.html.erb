@@ -3,4 +3,6 @@
 
 <p>Course Hours: <%=@course.class_hours%></p>
 
-<%= link_to "Home", root_path %> 
+<%= link_to "Home", root_path %>
+<a href="/courses/<%=@course.id%>/edit">View</a>
+<%= link_to "Delete", course_path(@course), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>

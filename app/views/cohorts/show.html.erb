@@ -12,3 +12,7 @@
   <li><%=student.hero_name%></li>
   <%end%>
 </ol>
+
+<%= link_to "Home", root_path %>
+<a href="/cohorts/<%=@cohort.id%>/edit">View</a>
+<%= link_to "Delete", cohort_path(@cohort), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>
