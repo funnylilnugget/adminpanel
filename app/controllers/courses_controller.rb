@@ -31,6 +31,12 @@ class CoursesController < ApplicationController
     redirect_to '/courses'
   end
 
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    redirect_to '/courses'
+  end
+
   private
 
   def courses_params

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'admins/new'
+  get 'admins/edit'
+  get 'admins/show'
+  get 'admins/index'
   root 'pages#home'
   resources :teachers
   resources :students
