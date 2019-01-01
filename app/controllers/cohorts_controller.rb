@@ -45,7 +45,7 @@ class CohortsController < ApplicationController
       :end_date,
       :teacher_id, {student_ids: []},
       :course_id)
-    end
-
-
   end
+
+
+end

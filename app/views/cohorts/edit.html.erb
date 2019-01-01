@@ -10,7 +10,10 @@
   <%= f.label :end_date %>
   <%= f.date_field :end_date %>
 
-  <%= f.label :teacher %></h5>
+  <%= f.label :course %>
+  <%= f.select(:course_id, Course.all.collect { |course| [course.name, course.id]},{include_blank: true }) %><br>
+
+  <%= f.label :teacher %>
   <%= f.select(:teacher_id, Teacher.all.collect { |teacher| [teacher.first_name, teacher.last_name, teacher.id]},{include_blank: true }) %>
 
   <%= collection_check_boxes(:cohort, :student_ids, Student.all, :id, :hero_name) %>

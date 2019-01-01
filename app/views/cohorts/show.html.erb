@@ -3,8 +3,20 @@
 
 <p>Start Date: <%=@cohort.start_date%></p>
 <p>End Date: <%=@cohort.end_date%></p>
-<p>Teacher: <%=@cohort.teacher.first_name%></p>
-<p>Course: <%=@cohort.course.name%></p>
+
+<% teacher = @cohort.teacher %>
+<% if teacher != nil %>
+<p>Teacher: <%= teacher.first_name %> <%= teacher.last_name %></p>
+<% else %>
+<p>No teacher found!</p>
+<% end %>
+
+<% course = @cohort.course %>
+<% if course != nil %>
+<p>Course: <%=course.name%></p>
+<% else %>
+<p>No course found!</p>
+<% end %>
 
 <p>Students: </p>
 <ol>
@@ -14,5 +26,5 @@
 </ol>
 
 <%= link_to "Home", root_path %>
-<a href="/cohorts/<%=@cohort.id%>/edit">View</a>
+<a href="/cohorts/<%=@cohort.id%>/edit">Edit</a>
 <%= link_to "Delete", cohort_path(@cohort), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>
