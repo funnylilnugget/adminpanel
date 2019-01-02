@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   resources :cohorts
   resources :admins
 
-  get 'cohort_signup', to: 'cohorts#new'
+  get 'cohort_new', to: 'cohorts#new'
+  get 'student_new', to: 'students#new'
+  get 'teacher_new', to: 'teachers#new'
+  get 'course_new', to: 'courses#new'
+
 end

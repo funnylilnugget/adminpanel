@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+ .sidenav {
+   height: 100%;
+   width: 160px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #00087F;
+   overflow-x: hidden;
+   padding-top: 100px;
+   border: solid red 2px;
+   color: white;
+ }
+
+
+ .sidenav a {
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 20px;
+   color: white;
+   display: block;
+ }
+
+
+ .sidenav a:hover {
+   color: lightgray;
+ }
+
+#principal-pic {
+  height: 250px;
+  width: auto;
+  padding-top: 80px;
+}
+
+ .main {
+   margin-left: 160px;
+   padding: 0px 10px;
+ }
+
+
+td, th {
+  padding: 7px;
+  border-bottom: solid black 1px;
+}
+
+table {
+   width: 75%;
+}
+
+table a {
+     text-decoration: none;
+}
+
+.table-shade tr:nth-child(even) {
+  background-color: rgba(255, 0, 0, .7);
+}
+
+.table-shade tr:hover {
+  background-color: rgba(255, 0, 0, .4);
+}
+
+
+.topnav {
+  background-color: #00087F;
+padding-left: 160px;
+border: solid red 2px;
+}
+
+h2, h1 {
+  text-align: center;
+}

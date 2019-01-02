@@ -1,13 +1,16 @@
-  <table>
+<h2>U.A. Course Index</h2>
+
+  <table class="table-shade" align="center">
     <tr>
       <th>Course Name:</th>
       <th>Course Hours:</th>
+      <th>View | Edit | Delete:</th>
       </tr>
     <tr>
       <% @course.each do |s| %>
       <td><%= s.name %></td>
-      <td><%= s.class_hours %></td>
-      <td><a href="/courses/<%=s.id%>">View</a></td>
+      <td><center><%= s.class_hours %></center></td>
+      <td><center><a href="/courses/<%=s.id%>">View</a></center></td>
     </tr>
     <% end %>
     </table>

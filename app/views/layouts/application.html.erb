@@ -4,13 +4,34 @@
     <title>Adminpanel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+    <div class="topnav" id="myTopnav">
+  <center><a href="/" class="active"><img src="/assets/ua-high-logo.png"></a></center>
+</div>
+
+<div class="sidenav">
+  <%= link_to "Students", students_path %>
+  <%= link_to "Teachers", teachers_path %>
+  <%= link_to "Courses", courses_path %>
+  <%= link_to "Cohorts", cohorts_path %>
+  <br>
+  <h3><center>Quick Links</center></h3>
+  <%= link_to "Create New Student", student_new_path %>
+  <%= link_to "Create New Teacher", teacher_new_path %>
+  <%= link_to "Create New Course", course_new_path %>
+  <%= link_to "Create New Cohort", cohort_new_path %>
+  <center><img id="principal-pic" src="/assets/Nezu_Full_Body.png"></center>
+  </div>
+
+<div class="main">
     <%= yield %>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</div>
+
   </body>
 </html>

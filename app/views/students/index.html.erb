@@ -1,6 +1,6 @@
 <h2>All U.A. Students</h2>
 
-<table>
+<table class="table-shade" align="center">
   <tr>
   <th>First Name</th>
   <th>Last Name</th>
@@ -8,6 +8,7 @@
   <th>Quirk</th>
   <th>Age</th>
   <th>Education</th>
+  <th>View | Edit | Delete:</th>
   </tr>
 <% @student.each do |s| %>
     <tr>
@@ -15,9 +16,9 @@
       <td><%= s.last_name %></td>
       <td><%= s.hero_name %></td>
       <td><%= s.quirk %></td>
-      <td><%= s.age %></td>
+      <td><center><%= s.age %></center></td>
       <td><%= s.education %></td>
-      <td><a href="/students/<%=s.id%>">View Student</a></td>
+      <td><center><a href="/students/<%=s.id%>">View Student</a></center></td>
     </tr>
     <% end %>
 </table>

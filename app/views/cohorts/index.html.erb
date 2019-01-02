@@ -1,8 +1,13 @@
-<table>
+<h1>U.A Cohort Index</h1>
+
+<table class="table-shade" align="center">
+  <tr>
+    <th>Cohort Name:</th>
+    <th>View | Edit | Delete:</th>
 <% @cohort.each do |s| %>
     <tr>
       <td><%= s.name %></td>
-      <td><a href="/cohorts/<%=s.id%>">View</a></td>
+      <td><center><a href="/cohorts/<%=s.id%>">View</a><center></td>
     </tr>
     <% end %>
 </table>

@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2018_12_28_201115) do
     t.date "start_date"
     t.date "end_date"
     t.integer "teacher_id"
-    t.integer "student_id"
     t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

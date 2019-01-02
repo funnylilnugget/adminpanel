@@ -1,4 +1,6 @@
-<table>
+<h2>U.A. Teacher Index</h2>
+
+  <table class="table-shade" align="center">
 <tr>
   <th>First Name</th>
   <th>Last Name</th>
@@ -7,6 +9,7 @@
   <th>Age</th>
   <th>Salary</th>
   <th>Education</th>
+  <th>View | Edit | Delete:</th>
   </tr>
   <% @teacher.each do |s| %>
     <tr>
@@ -14,10 +17,10 @@
       <td><%= s.last_name %></td>
       <td><%= s.hero_name %></td>
       <td><%= s.quirk %></td>
-      <td><%= s.age %></td>
-      <td><%= s.salary %></td>
+      <td><center><%= s.age %></center></td>
+      <td><center>$<%= s.salary.floor %></center></td>
       <td><%= s.education %></td>
-      <td><a href="/teachers/<%=s.id%>">View Teacher</a></td>
+      <td><center><a href="/teachers/<%=s.id%>">View Teacher</a></center></td>
     </tr>
     <% end %>
 </table>

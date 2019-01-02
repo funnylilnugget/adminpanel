@@ -35,12 +35,12 @@ Teacher.create(first_name: 'Toshinori', last_name: 'Yagi', age: '42', salary: '7
 Teacher.create(first_name: 'Shota', last_name: 'Aizawa', age: '31', salary: '60000', education: 'High School', quirk: 'Erasure', hero_name: 'Eraser Head')
 Teacher.create(first_name: 'Hizashi', last_name: 'Yamada', age: '30', salary: '65000', education: 'High School', quirk: 'Voice', hero_name: 'Present Mic')
 Teacher.create(first_name: 'Ken', last_name: 'Ishiyama', age: '28', salary: '50000', education: 'High School', quirk: 'Cement', hero_name: 'Cementoss')
-Teacher.create(first_name: 'Nemuri', last_name: 'Kayam', age: '31', salary: '80000', education: '', quirk: 'Somnambulist', hero_name: 'Midnight')
-Teacher.create(first_name: '', last_name: '', age: '', salary: '65000', education: 'High School', quirk: 'Homing', hero_name: 'Snipe')
-Teacher.create(first_name: '', last_name: '', age: '41', salary: '50000', education: '', quirk: 'Clonse', hero_name: 'Ectoplasm')
+Teacher.create(first_name: 'Nemuri', last_name: 'Kayam', age: '31', salary: '80000', education: 'High School', quirk: 'Somnambulist', hero_name: 'Midnight')
+Teacher.create(first_name: 'Unknown', last_name: 'Unknown', age: '1', salary: '65000', education: 'High School', quirk: 'Homing', hero_name: 'Snipe')
+Teacher.create(first_name: 'Unknown', last_name: 'Unknown', age: '41', salary: '50000', education: 'High School', quirk: 'Clonse', hero_name: 'Ectoplasm')
 Teacher.create(first_name: 'Higari', last_name: 'Maijima', age: '40', salary: '30000', education: 'High School', quirk: 'Iron Claws', hero_name: 'Power Loader')
 Teacher.create(first_name: 'Sekijiro', last_name: 'Kan', age: '31', salary: '45000', education: 'High School', quirk: 'Blood Control', hero_name: 'Vlad King')
-Teacher.create(first_name: 'Sorahiko', last_name: '', age: '70', salary: '5000', education: '', quirk: 'Jet', hero_name: 'Gran Torino')
+Teacher.create(first_name: 'Sorahiko', last_name: '', age: '70', salary: '5000', education: 'High School', quirk: 'Jet', hero_name: 'Gran Torino')
 
 
 ########## Course Database Information ######
