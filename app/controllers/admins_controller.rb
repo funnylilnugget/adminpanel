@@ -30,6 +30,8 @@ private
                                     :last_name,
                                     :user_name,
                                     :password,
+                                    :email,
+                                    :password_confirmation
                                     )
   end
 end

@@ -6,11 +6,11 @@
   <div class="card">
     <center><%= image_tag(@student.avatar) if @student.avatar.attached?%></center>
     <div class="container">
-      <p>Student Name: <%=@student.first_name%> <%=@student.last_name%></p>
-      <p>Hero Name: <%=@student.hero_name%>
-        <p>Age: <%=@student.age%></p>
-        <p>Quirk: <%=@student.quirk%></p>
-        <p>Education: <%=@student.education%></p>
+      <p><b>Student Name: </b><%=@student.first_name%> <%=@student.last_name%></p>
+      <p><b>Hero Name: </b><%=@student.hero_name%>
+        <p><b>Age: </b><%=@student.age%></p>
+        <p><b>Quirk: </b><%=@student.quirk%></p>
+        <p><b>Education: </b><%=@student.education%></p>
       </div>
     </div>
 

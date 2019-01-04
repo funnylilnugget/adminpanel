@@ -23,6 +23,9 @@
 <h5><%= f.label :education %></h5>
 <%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
 
+<h5><%= f.label :avatar %></h5>
+<%= f.file_field :avatar, direct_upload: true %><br><br>
+
 <%= f.submit "Create Teacher" %>
 
 <% end %>

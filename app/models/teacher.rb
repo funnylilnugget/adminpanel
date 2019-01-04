@@ -3,4 +3,5 @@ class Teacher < ApplicationRecord
   validates :age, inclusion: {in: 1..150}
   validates :salary, numericality: {greater_than: 0}
   has_many :cohorts
+  has_one_attached :avatar
 end

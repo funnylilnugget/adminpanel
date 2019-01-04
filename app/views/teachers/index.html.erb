@@ -2,6 +2,7 @@
 
   <table class="table-shade" align="center">
 <tr>
+  <th>Profile Pic</th>
   <th>First Name</th>
   <th>Last Name</th>
   <th>Hero Name</th>
@@ -14,6 +15,7 @@
   </tr>
   <% @teacher.each do |s| %>
     <tr id="teacher-<%=s.id%>">
+      <td class="chip"><%= image_tag(s.avatar) if s.avatar.attached?%></td>
       <td><%= s.first_name %></td>
       <td><%= s.last_name %></td>
       <td><%= s.hero_name %></td>

@@ -1,16 +1,26 @@
 <h1>U.A. Teacher Information</h1>
 
-<p>Teacher Name:
-  <%=@teacher.first_name%>
+<div class="grid">
+  <div></div>
+
+  <div class="card">
+    <center><%= image_tag(@teacher.avatar) if @teacher.avatar.attached?%></center>
+    <div class="container">
+<p><b>Teacher Name: </b><%=@teacher.first_name%>
   <%=@teacher.last_name%></p>
-<p>Hero Name:
+<p><b>Hero Name: </b>
   <%=@teacher.hero_name%>
-  <p>Age:
+  <p><b>Age: </b>
     <%=@teacher.age%></p>
-  <p>Quirk:
+  <p><b>Quirk: </b>
     <%=@teacher.quirk%></p>
-  <p>Education:
+  <p><b>Education: </b>
     <%=@teacher.education%></p>
+  </div>
+</div>
+
+<div></div>
+</div>
 
   <%= link_to "Home", root_path %>
-  <a href="/teachers/<%=@teacher.id%>/edit">View</a>
+  <a href="/teachers/<%=@teacher.id%>/edit">Edit</a>

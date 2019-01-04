@@ -15,7 +15,7 @@
 <%= f.select(:course_id, Course.all.collect { |course| [course.name, course.id]},{include_blank: true }) %><br>
 
 <h3><%= f.label :teacher %></h3>
-<%= f.select(:teacher_id, Teacher.all.collect { |teacher| [teacher.first_name, teacher.last_name, teacher.id]},{include_blank: true }) %><br>
+<%= f.select(:teacher_id, Teacher.all.collect { |teacher| [teacher.hero_name]},{include_blank: true }) %><br>
 
 <h3><%= f.label :student %></h3>
 <%= f.collection_check_boxes :student_ids, Student.all, :id, :hero_name do |student| %>
