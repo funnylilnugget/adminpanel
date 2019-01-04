@@ -2,16 +2,19 @@
 
 <table class="table-shade" align="center">
   <tr>
+  <th>Profile Picture</th>
   <th>First Name</th>
   <th>Last Name</th>
   <th>Hero Name</th>
   <th>Quirk</th>
   <th>Age</th>
   <th>Education</th>
-  <th>View | Edit | Delete:</th>
+  <th>View | Edit</th>
+  <th>Delete</th>
   </tr>
 <% @student.each do |s| %>
-    <tr>
+    <tr id="student-<%=s.id%>">
+      <td class="chip"><%= image_tag(s.avatar) if s.avatar.attached?%></td>
       <td><%= s.first_name %></td>
       <td><%= s.last_name %></td>
       <td><%= s.hero_name %></td>
@@ -19,6 +22,7 @@
       <td><center><%= s.age %></center></td>
       <td><%= s.education %></td>
       <td><center><a href="/students/<%=s.id%>">View Student</a></center></td>
+      <td><center><%= link_to "Delete", s, remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %></center></td>
     </tr>
     <% end %>
 </table>

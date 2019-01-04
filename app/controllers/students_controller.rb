@@ -33,9 +33,11 @@ class StudentsController < ApplicationController
 
   def destroy
     @student = Student.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
     @student.destroy
-    redirect_to '/students'
-  end
+    end
 
   private
 
@@ -46,8 +48,9 @@ class StudentsController < ApplicationController
                                     :education,
                                     :cohort_id,
                                     :quirk,
-                                    :hero_name
-                                  )
+                                    :hero_name,
+                                    :avatar
+                                   )
   end
 
 

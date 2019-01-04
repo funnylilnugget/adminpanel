@@ -33,8 +33,10 @@ class CoursesController < ApplicationController
 
   def destroy
     @course = Course.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
     @course.destroy
-    redirect_to '/courses'
   end
 
   private

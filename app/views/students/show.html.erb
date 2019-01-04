@@ -1,11 +1,21 @@
 <h1>U.A. Student Information</h1>
 
-<p>Student Name: <%=@student.first_name%> <%=@student.last_name%></p>
-<p>Hero Name: <%=@student.hero_name%>
-<p>Age: <%=@student.age%></p>
-<p>Quirk: <%=@student.quirk%></p>
-<p>Education: <%=@student.education%></p>
+<div class="grid">
+  <div></div>
+
+  <div class="card">
+    <center><%= image_tag(@student.avatar) if @student.avatar.attached?%></center>
+    <div class="container">
+      <p>Student Name: <%=@student.first_name%> <%=@student.last_name%></p>
+      <p>Hero Name: <%=@student.hero_name%>
+        <p>Age: <%=@student.age%></p>
+        <p>Quirk: <%=@student.quirk%></p>
+        <p>Education: <%=@student.education%></p>
+      </div>
+    </div>
+
+    <div></div>
+</div>
 
 <%= link_to "Home", root_path %>
-<a href="/students/<%=@student.id%>/edit">View</a>
-<%= link_to "Delete", student_path(@student), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>
+<a href="/students/<%=@student.id%>/edit">Edit</a>

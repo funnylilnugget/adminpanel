@@ -5,4 +5,3 @@
 
 <%= link_to "Home", root_path %>
 <a href="/courses/<%=@course.id%>/edit">Edit</a>
-<%= link_to "Delete", course_path(@course), remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %>

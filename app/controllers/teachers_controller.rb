@@ -33,8 +33,10 @@ class TeachersController < ApplicationController
 
   def destroy
     @teacher = Teacher.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
     @teacher.destroy
-    redirect_to '/teachers'
   end
 
   private

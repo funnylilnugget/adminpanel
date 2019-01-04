@@ -3,11 +3,14 @@
 <table class="table-shade" align="center">
   <tr>
     <th>Cohort Name:</th>
-    <th>View | Edit | Delete:</th>
+    <th>View | Edit</th>
+    <th>Delete</th>
 <% @cohort.each do |s| %>
-    <tr>
+    <tr id="cohort-<%=s.id%>">
       <td><%= s.name %></td>
       <td><center><a href="/cohorts/<%=s.id%>">View</a><center></td>
+      <td><center><%= link_to "Delete", s, remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %></center></td>
+
     </tr>
     <% end %>
 </table>

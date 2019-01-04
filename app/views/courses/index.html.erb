@@ -2,15 +2,17 @@
 
   <table class="table-shade" align="center">
     <tr>
-      <th>Course Name:</th>
-      <th>Course Hours:</th>
-      <th>View | Edit | Delete:</th>
+      <th>Course Name</th>
+      <th>Course Hours</th>
+      <th>View | Edit</th>
+      <th>Delete</th>
       </tr>
-    <tr>
       <% @course.each do |s| %>
+    <tr id="course-<%=s.id%>">
       <td><%= s.name %></td>
       <td><center><%= s.class_hours %></center></td>
       <td><center><a href="/courses/<%=s.id%>">View</a></center></td>
+      <td><center><%= link_to "Delete", s, remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %></center></td>
     </tr>
     <% end %>
     </table>
