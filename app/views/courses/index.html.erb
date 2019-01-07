@@ -1,18 +1,26 @@
 <h2>U.A. Course Index</h2>
 
-  <table class="table-shade" align="center">
-    <tr>
-      <th>Course Name</th>
-      <th>Course Hours</th>
-      <th>View | Edit</th>
-      <th>Delete</th>
-      </tr>
-      <% @course.each do |s| %>
+<table class="table-shade" align="center">
+  <tr>
+    <th>Course Name</th>
+    <th>Course Hours</th>
+    <th>View | Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% @course.each do |s| %>
     <tr id="course-<%=s.id%>">
       <td><%= s.name %></td>
-      <td><center><%= s.class_hours %></center></td>
-      <td><center><a href="/courses/<%=s.id%>">View</a></center></td>
-      <td><center><%= link_to "Delete", s, remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %></center></td>
+      <td>
+        <center><%= s.class_hours %></center>
+      </td>
+      <td>
+        <center>
+          <%= link_to 'View', admin_course_path(session[:user_id], s)%>
+        </center>
+      </td>
+      <td>
+        <center><%= link_to "Delete", admin_course_path(session[:user_id], s), remote: true, method: :delete, data: { confirm: 'Are you sure?'} %></center>
+      </td>
     </tr>
-    <% end %>
-    </table>
+  <% end %>
+</table>

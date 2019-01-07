@@ -1,17 +1,25 @@
 Rails.application.routes.draw do
 
+
   root 'pages#home'
 
-  resources :teachers
-  resources :students
-  resources :courses
-  resources :pages
-  resources :cohorts
-  resources :admins
+  resources :sessions, only: [:new, :create, :index, :destroy]
 
-  get 'cohort_new', to: 'cohorts#new'
-  get 'student_new', to: 'students#new'
-  get 'teacher_new', to: 'teachers#new'
-  get 'course_new', to: 'courses#new'
+  resources :admins do
+    resources :courses
+    resources :teachers
+    resources :students
+    resources :cohorts
+
+  end
+
+  resources :pages
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get  'logout', to: 'sessions#destroy'
+  delete  'logout', to: 'sessions#destroy'
+
+  get 'admins', to: 'pages#home'
 
 end

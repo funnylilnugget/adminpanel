@@ -1,17 +1,17 @@
 <h2>U.A. Teacher Index</h2>
 
-  <table class="table-shade" align="center">
-<tr>
-  <th>Profile Pic</th>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Hero Name</th>
-  <th>Quirk</th>
-  <th>Age</th>
-  <th>Salary</th>
-  <th>Education</th>
-  <th>View | Edit</th>
-  <th>Delete</th>
+<table class="table-shade" align="center">
+  <tr>
+    <th>Profile Pic</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Hero Name</th>
+    <th>Quirk</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Education</th>
+    <th>View | Edit</th>
+    <th>Delete</th>
   </tr>
   <% @teacher.each do |s| %>
     <tr id="teacher-<%=s.id%>">
@@ -20,11 +20,19 @@
       <td><%= s.last_name %></td>
       <td><%= s.hero_name %></td>
       <td><%= s.quirk %></td>
-      <td><center><%= s.age %></center></td>
-      <td><center>$<%= s.salary.floor %></center></td>
+      <td>
+        <center><%= s.age %></center>
+      </td>
+      <td>
+        <center>$<%= s.salary.floor %></center>
+      </td>
       <td><%= s.education %></td>
-      <td><center><a href="/teachers/<%=s.id%>">View Teacher</a></center></td>
-      <td><center><%= link_to "Delete", s, remote: true, method: :delete, data: { confirm: 'Do you really want to delete this?'} %></center></td>
+      <td>
+        <center><%= link_to 'View', admin_teacher_path(session[:user_id], s)%></center>
+      </td>
+      <td>
+        <center><%= link_to "Delete", admin_teacher_path(session[:user_id], s), remote: true, method: :delete, data: { confirm: 'Are you sure?'} %></center>
+      </td>
     </tr>
-    <% end %>
+  <% end %>
 </table>

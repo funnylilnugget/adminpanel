@@ -26,4 +26,4 @@
 </ol>
 
 <%= link_to "Home", root_path %>
-<a href="/cohorts/<%=@cohort.id%>/edit">Edit</a>
+<%= link_to 'Edit', edit_admin_cohort_path(session[:user_id])%>

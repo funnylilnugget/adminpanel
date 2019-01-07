@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
   def new
+    @admin = Admin.find(params[:admin_id])
     @teacher = Teacher.new
   end
 
@@ -7,13 +8,14 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teachers_params)
     if @teacher.valid?
       @teacher.save
-      redirect_to @teacher
+      redirect_to admin_teachers_path
     else
       render 'new'
     end
   end
 
   def edit
+    @admin = Admin.find(params[:admin_id])
     @teacher = Teacher.find(params[:id])
   end
 
@@ -28,7 +30,7 @@ class TeachersController < ApplicationController
   def update
     @teacher = Teacher.find(params[:id])
     @teacher.update(teachers_params)
-    redirect_to '/teachers'
+    redirect_to admin_teachers_path
   end
 
   def destroy

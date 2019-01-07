@@ -1,0 +1,14 @@
+<h1>Login</h1>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+
+  <h5><%= f.label :user_name %></h5>
+  <%= f.text_field :user_name %><br>
+
+
+<h5><%= f.password_field :password, placeholder: "Password" %>
+     </h5>
+
+<%= f.submit "Enter" %>
+
+<% end %>

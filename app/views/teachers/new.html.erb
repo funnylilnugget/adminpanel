@@ -1,6 +1,6 @@
 <h1>U.A. High School Teacher Registration</h1>
 
-<%= form_for (@teacher) do |f| %>
+<%= form_for ([@admin, @teacher]) do |f| %>
 
 <h5><%= f.label :first_name %></h5>
 <%= f.text_field :first_name %><br>

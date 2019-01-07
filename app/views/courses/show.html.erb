@@ -4,4 +4,4 @@
 <p>Course Hours: <%=@course.class_hours%></p>
 
 <%= link_to "Home", root_path %>
-<a href="/courses/<%=@course.id%>/edit">Edit</a>
+<%= link_to 'Edit', edit_admin_course_path(session[:user_id])%>

@@ -1,6 +1,6 @@
 <h1> Edit <%= @teacher.first_name %> <%= @teacher.last_name %> </h1>
 
-<%= form_for (@teacher) do |f| %>
+<%= form_for ([@admin, @teacher]) do |f| %>
 
 <p><%= f.label :first_name %></p>
 <%= f.text_field :first_name %><br>

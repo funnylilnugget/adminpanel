@@ -23,4 +23,4 @@
 </div>
 
   <%= link_to "Home", root_path %>
-  <a href="/teachers/<%=@teacher.id%>/edit">Edit</a>
+  <%= link_to 'Edit', edit_admin_teacher_path(session[:user_id])%>

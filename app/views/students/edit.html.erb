@@ -1,5 +1,5 @@
 <h1> Edit <%= @student.first_name %> <%= @student.last_name %> </h1>
-<%= form_for (@student) do |f| %>
+<%= form_for ([@admin, @student]) do |f| %>
 
 <p><%= f.label :first_name %></p>
 <%= f.text_field :first_name %><br>

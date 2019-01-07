@@ -1,6 +1,6 @@
 <h1>U.A. High School Course Registration</h1>
 
-  <%= form_for (@course) do |f| %>
+  <%= form_for([@admin, @course]) do |f| %>
 
   <h5><%= f.label :name %></h5>
   <%= f.text_field :name %><br>

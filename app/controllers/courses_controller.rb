@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   def new
+    @admin = Admin.find(params[:admin_id])
     @course = Course.new
   end
 
@@ -7,13 +8,14 @@ class CoursesController < ApplicationController
     @course = Course.new(courses_params)
     if @course.valid?
       @course.save
-      redirect_to @course
+      redirect_to admin_courses_path
     else
       render 'new'
     end
   end
 
   def edit
+    @admin = Admin.find(params[:admin_id])
     @course = Course.find(params[:id])
   end
 
@@ -28,7 +30,7 @@ class CoursesController < ApplicationController
   def update
     @course = Course.find(params[:id])
     @course.update(courses_params)
-    redirect_to '/courses'
+    redirect_to admin_courses_path
   end
 
   def destroy

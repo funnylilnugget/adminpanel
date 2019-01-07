@@ -1,5 +1,5 @@
 <h2> Edit <%= @cohort.name %> </h2>
-<%= form_for (@cohort) do |f| %>
+<%= form_for ([@admin, @cohort]) do |f| %>
 
   <h3><%= f.label :name %></h3>
   <%= f.text_field :name %>
@@ -14,8 +14,7 @@
   <%= f.select(:course_id, Course.all.collect { |course| [course.name, course.id]},{include_blank: true }) %><br>
 
   <h3><%= f.label :teacher %></h3>
-  <%= f.select(:teacher_id, Teacher.all.collect { |teacher| [teacher.first_name, teacher.last_name, teacher.id]},{include_blank: true }) %>
-
+<%= f.collection_select(:teacher_id, Teacher.all, :id, :hero_name) %>
   <h3><%= f.label :student %></h3>
   <%= collection_check_boxes(:cohort, :student_ids, Student.all, :id, :hero_name) %><br>
 
