@@ -1,2 +1,21 @@
-<h1>Admins#show</h1>
-<p>Find me in app/views/admins/show.html.erb</p>
+<h1>Create Account</h1>
+
+<div class="grid">
+  <div></div>
+
+  <div class="card">
+    <div class="container">
+<p><b>Admin Name: </b><%=@admin.first_name%>
+  <%=@admin.last_name%></p>
+<p><b>User Name: </b>
+  <%=@admin.user_name%>
+  <p><b>Email: </b>
+    <%=@admin.email%></p>
+  </div>
+</div>
+
+<div></div>
+</div>
+
+  <%= link_to "Home", root_path %>
+  <%= link_to 'Edit', edit_admin_path(session[:user_id])%>

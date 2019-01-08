@@ -5,42 +5,40 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
     <div class="topnav" id="myTopnav">
-  <center><a href="/" class="active"><img src="/assets/ua-high-logo.png"></a></center>
-<% if session[:user_id] == nil %>
-<%= link_to "login", login_path %>
-<% else %>
-  <%= link_to "Logout", logout_path %>
-  <% end %>
-</div>
+      <center>
+        <a href="/" class="active"><img src="/assets/ua-high-logo.png"></a>
+      </center>
 
-<% if session[:user_id] != nil %>
-<div class="sidenav">
-<a href="<%=admin_students_path(session[:user_id])%>">Students</a>
-  <a href="<%=admin_teachers_path(session[:user_id])%>">Teachers</a>
-  <a href="<%=admin_courses_path(session[:user_id])%>">Courses</a>
-<a href="<%=admin_cohorts_path(session[:user_id])%>">Cohorts</a>
-  <br>
-  <h3><center>Quick Links</center></h3>
-  <%= link_to "Create New Student", new_admin_student_path(session[:user_id]) %>
-  <%= link_to "Create New Teacher", new_admin_teacher_path(session[:user_id]) %>
-  <%= link_to "Create New Course", new_admin_course_path(session[:user_id]) %>
-  <%= link_to "Create New Cohort", new_admin_cohort_path(session[:user_id]) %>
-  <center><img id="principal-pic" src="/assets/Nezu_Full_Body.png"></center>
-  </div>
+    </div>
 
-  <% end %>
+    <% if session[:user_id] != nil %>
+      <div class="sidenav">
 
+        <%= link_to "Profile", admin_path(session[:user_id]) %>
+        <%= link_to "Logout", logout_path %>
+<br>
+        <a href="<%=admin_students_path(session[:user_id])%>"><i class="fas fa-user"></i> Students</a>
+        <a href="<%=admin_teachers_path(session[:user_id])%>"><i class="fas fa-user-graduate"></i> Teachers</a>
+        <a href="<%=admin_courses_path(session[:user_id])%>"><i class="fas fa-chalkboard"></i> Courses</a>
+        <a href="<%=admin_cohorts_path(session[:user_id])%>"><i class="fas fa-chalkboard-teacher"></i> Cohorts</a>
 
-<div class="main">
-    <%= yield %>
-</div>
+        <center><img id="principal-pic" src="/assets/Nezu_Full_Body.png"></center>
+      </div>
+
+    <% end %>
+    <div class="main">
+      <%= yield %>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
 
   </body>
 </html>

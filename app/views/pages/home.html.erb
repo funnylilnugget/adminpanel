@@ -1,1 +1,10 @@
+<% if session[:user_id] == nil %>
+<%= link_to "Login", login_path %>
+<%= link_to "Create Account", new_admin_path %>
+<% else %>
+
 <h1>U.A. Highschool</h1>
+
+<h1>Logged in</h1>
+
+<% end %>
