@@ -7,7 +7,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admins_params)
     if @admin.valid?
       @admin.save
-      redirect_to @admin
+      redirect_to admin_path(@admin)
     else
       render 'new'
     end

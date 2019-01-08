@@ -27,7 +27,7 @@ body {
    z-index: 1;
    top: 0;
    left: 0;
-   background-color: #252E65;
+     background-color: #252E65;
    overflow-x: hidden;
    padding-top: 100px;
    border: solid #B62A29 3px;
@@ -138,7 +138,7 @@ h2, h1 {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #00087F;
+  background-color: #252E65;
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -148,4 +148,18 @@ h2, h1 {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+.button {
+  background-color: #252E65;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
 }
