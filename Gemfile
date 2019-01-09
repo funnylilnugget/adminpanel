@@ -63,9 +63,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem 'rollbar'
-# gem "google-cloud-storage", "~> 1.8", require: false
+gem "google-cloud-storage", "~> 1.8", require: false
 
-gem 'aws-sdk-s3' 
+# gem 'aws-sdk-s3'
 
 group :production do
   gem 'pg'
