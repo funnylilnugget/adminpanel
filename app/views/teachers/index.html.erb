@@ -1,6 +1,9 @@
-<h2>U.A. Teacher Index</h2>
+<h1>U.A. Teacher Index</h1>
 
-<%= link_to "Create New Teacher", new_admin_teacher_path(session[:user_id]) %>
+<div class="button-center">
+<%= link_to "Create New Teacher", new_admin_teacher_path(session[:user_id]), class: "button" %>
+</div>
+<br>
 
 <table class="table-shade" align="center">
   <tr>

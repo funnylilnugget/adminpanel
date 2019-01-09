@@ -6,16 +6,24 @@
   <div class="card">
     <center><%= image_tag(@student.avatar) if @student.avatar.attached?%></center>
     <div class="container">
-      <p><b>Student Name: </b><%=@student.first_name%> <%=@student.last_name%></p>
-      <p><b>Hero Name: </b><%=@student.hero_name%>
-        <p><b>Age: </b><%=@student.age%></p>
-        <p><b>Quirk: </b><%=@student.quirk%></p>
-        <p><b>Education: </b><%=@student.education%></p>
+      <h3>Student Name:</h3>
+      <p><%=@student.first_name%>
+        <%=@student.last_name%></p>
+      <h3>Hero Name:</h3>
+      <p><%=@student.hero_name%>
+        <h3>Age:</h3>
+        <p><%=@student.age%></p>
+        <h3>Quirk:</h3>
+        <p><%=@student.quirk%></p>
+        <h3>Education:</h3>
+        <p><%=@student.education%></p>
       </div>
     </div>
 
     <div></div>
-</div>
-
-<%= link_to "Home", root_path %>
-  <%= link_to 'Edit', edit_admin_student_path(session[:user_id])%>
+  </div>
+  <br>
+  <div class="button-center">
+    <%= link_to "Home", root_path, class: "button" %>
+    <%= link_to 'Edit', edit_admin_student_path(session[:user_id]), class: "button" %>
+  </div>

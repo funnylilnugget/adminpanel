@@ -1,29 +1,53 @@
-
 <h1><%=@cohort.name%></h1>
 
-<p>Start Date: <%=@cohort.start_date%></p>
-<p>End Date: <%=@cohort.end_date%></p>
+<div class="grid">
+  <div></div>
 
-<% teacher = @cohort.teacher %>
-<% if teacher != nil %>
-<p>Teacher: <%= teacher.first_name %> <%= teacher.last_name %></p>
-<% else %>
-<p>No teacher found!</p>
-<% end %>
+  <div class="card">
+    <div class="container">
+      <h3>Start Date:</h3>
+      <p><%=@cohort.start_date%></p>
 
-<% course = @cohort.course %>
-<% if course != nil %>
-<p>Course: <%=course.name%></p>
-<% else %>
-<p>No course found!</p>
-<% end %>
+      <h3>End Date:</h3>
+      <p><%=@cohort.end_date%></p>
 
-<p>Students: </p>
-<ol>
-  <%@cohort.students.each do |student|%>
-  <li><%=student.hero_name%></li>
-  <%end%>
-</ol>
+      <% teacher = @cohort.teacher %>
+        <% if teacher != nil %>
+          <h3>Teacher:</h3>
+          <p><%= teacher.hero_name %></p>
+        <% else %>
+          <h3>Teacher:</h3>
+          <p>
+            <i>
+              No teacher assigned!</i>
+          </p>
+        <% end %>
 
-<%= link_to "Home", root_path %>
-<%= link_to 'Edit', edit_admin_cohort_path(session[:user_id])%>
+        <% course = @cohort.course %>
+          <% if course != nil %>
+            <h3>Course:</h3>
+            <p><%=course.name%></p>
+          <% else %>
+            <h3>Course:</h3>
+            <p>
+              <i>No course found!</i>
+            </p>
+          <% end %>
+
+          <h3>Students:</h3>
+          <ol>
+            <%@cohort.students.each do |student|%>
+              <li><%=student.hero_name%></li>
+            <%end%>
+          </ol>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+
+    <br>
+    <div class="button-center">
+      <%= link_to "Home", root_path, class: "button" %>
+      <%= link_to 'Edit', edit_admin_cohort_path(session[:user_id]), class: "button"%>
+    </div>

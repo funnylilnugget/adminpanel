@@ -1,9 +1,22 @@
 <h1> Edit <%= @course.name %> </h1>
-<%= form_for ([@admin, @course]) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :class_hours %>
-  <%= f.text_field :class_hours %>
 
-  <%= f.submit 'Submit'%>
+<div class="grid">
+  <div></div>
+
+<div class="card">
+  <div class="container">
+<%= form_for ([@admin, @course]) do |f| %>
+  <h3><%= f.label :name %></h3>
+  <%= f.text_field :name %>
+  <h3><%= f.label :class_hours %></h3>
+  <%= f.text_field :class_hours %>
+  <br><br>
+</div>
+</div>
+<div></div>
+</div>
+<br>
+<div class="button-center">
+  <%= f.submit 'Submit', class: "button"%>
+    </div>
 <% end %>

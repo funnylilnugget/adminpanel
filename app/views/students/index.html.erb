@@ -1,6 +1,9 @@
-<h2>All U.A. Students</h2>
-<%= link_to "Create New Student", new_admin_student_path(session[:user_id]), class: "button" %>
+<h1>U.A. Student Index</h1>
 
+<div class="button-center">
+<%= link_to "Create New Student", new_admin_student_path(session[:user_id]), class: "button" %>
+</div>
+<br>
 <table class="table-shade" align="center">
   <tr>
     <th>Profile Picture</th>

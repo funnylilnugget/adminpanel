@@ -1,7 +1,9 @@
-<h1>U.A Cohort Index</h1>
+<h1>U.A. Cohort Index</h1>
 
-<%= link_to "Create New Cohort", new_admin_cohort_path(session[:user_id]) %>
-
+<div class="button-center">
+<%= link_to "Create New Cohort", new_admin_cohort_path(session[:user_id]), class: "button" %>
+</div>
+<br>
 
 <table class="table-shade" align="center">
   <tr>

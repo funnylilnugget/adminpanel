@@ -1,6 +1,9 @@
-<h2>U.A. Course Index</h2>
+<h1>U.A. Course Index</h1>
 
-<%= link_to "Create New Course", new_admin_course_path(session[:user_id]) %>
+<div class="button-center">
+<%= link_to "Create New Course", new_admin_course_path(session[:user_id]), class: "button" %>
+</div>
+<br>
 
 <table class="table-shade" align="center">
   <tr>

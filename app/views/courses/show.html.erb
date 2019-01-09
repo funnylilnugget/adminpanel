@@ -1,7 +1,17 @@
-
 <h1><%=@course.name%></h1>
 
-<p>Course Hours: <%=@course.class_hours%></p>
+<div class="grid">
+  <div></div>
 
-<%= link_to "Home", root_path %>
-<%= link_to 'Edit', edit_admin_course_path(session[:user_id])%>
+  <div class="card">
+    <div class="container">
+      <h3>Course Hours:</h3>
+      <p><%=@course.class_hours%></p>
+      <div></div>
+    </div>
+
+    <br>
+    <div class="button-center">
+      <%= link_to "Home", root_path, class: "button" %>
+      <%= link_to 'Edit', edit_admin_course_path(session[:user_id]), class: "button" %>
+    </div>

@@ -6,21 +6,26 @@
   <div class="card">
     <center><%= image_tag(@teacher.avatar) if @teacher.avatar.attached?%></center>
     <div class="container">
-<p><b>Teacher Name: </b><%=@teacher.first_name%>
-  <%=@teacher.last_name%></p>
-<p><b>Hero Name: </b>
-  <%=@teacher.hero_name%>
-  <p><b>Age: </b>
-    <%=@teacher.age%></p>
-  <p><b>Quirk: </b>
-    <%=@teacher.quirk%></p>
-  <p><b>Education: </b>
-    <%=@teacher.education%></p>
+      <h3>Teacher Name:</h3>
+      <p><%=@teacher.first_name%>
+        <%=@teacher.last_name%></p>
+      <h3>Hero Name:</h3>
+      <p><%=@teacher.hero_name%></p>
+      <h3>Age:</h3>
+      <p><%=@teacher.age%></p>
+      <h3>Quirk:</h3>
+      <p><%=@teacher.quirk%></p>
+      <h3>Salary:</h3>
+      <p>$<%=@teacher.salary.floor%></p>
+      <h3>Education:</h3>
+      <p><%=@teacher.education%></p>
+    </div>
   </div>
-</div>
 
-<div></div>
+  <div></div>
 </div>
-
-  <%= link_to "Home", root_path %>
-  <%= link_to 'Edit', edit_admin_teacher_path(session[:user_id])%>
+<br>
+<div class="button-center">
+  <%= link_to "Home", root_path, class: "button" %>
+  <%= link_to 'Edit', edit_admin_teacher_path(session[:user_id]), class: "button"%>
+</div>
