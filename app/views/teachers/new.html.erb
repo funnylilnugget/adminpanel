@@ -1,31 +1,42 @@
 <h1>U.A. High School Teacher Registration</h1>
 
+<div class="grid">
+  <div></div>
+
+<div class="card">
+  <div class="container">
 <%= form_for ([@admin, @teacher]) do |f| %>
 
-<h5><%= f.label :first_name %></h5>
+<h3><%= f.label :first_name %></h3>
 <%= f.text_field :first_name %><br>
 
-<h5><%= f.label :last_name %></h5>
+<h3><%= f.label :last_name %></h3>
 <%= f.text_field :last_name %><br>
 
-<h5><%= f.label :age %></h5>
+<h3><%= f.label :age %></h3>
 <%= f.number_field :age %><br>
 
-<h5><%= f.label :salary %></h5>
+<h3><%= f.label :salary %></h3>
 <%= f.number_field :salary %><br>
 
-<h5><%= f.label :hero_name %></h5>
+<h3><%= f.label :hero_name %></h3>
 <%= f.text_field :hero_name %><br>
 
-<h5><%= f.label :quirk %></h5>
+<h3><%= f.label :quirk %></h3>
 <%= f.text_field :quirk %><br>
 
-<h5><%= f.label :education %></h5>
+<h3><%= f.label :education %></h3>
 <%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
 
-<h5><%= f.label :avatar %></h5>
+<h3><%= f.label :avatar %></h3>
 <%= f.file_field :avatar, direct_upload: true %><br><br>
 
-<%= f.submit "Create Teacher" %>
-
+</div>
+</div>
+<div></div>
+</div>
+<br>
+<div class="button-center">
+<%= f.submit "Create Teacher", class: "button" %>
+</div>
 <% end %>
