@@ -15,6 +15,7 @@ local:
 #   bucket: your_own_bucket
 
 # Remember not to checkin your GCS keyfile to a repository
+
 google:
   service: GCS
   project: adminpanel
