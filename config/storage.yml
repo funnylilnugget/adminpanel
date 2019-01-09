@@ -20,13 +20,13 @@ google:
   service: GCS
   project: adminpanel
   credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
-  bucket: adminpanel-profilepic
+  bucket: ua-profilepic
 
 google_dev:
   service: GCS
   project: adminpanel
-  credentials: <%= Rails.root.join("config/secrets/adminpanel-profilepic.json") %>
-  bucket: adminpanel-profilepic
+  credentials: <%= Rails.root.join("config/secrets/adminpanel.json") %>
+  bucket: ua-profilepic
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
