@@ -71,6 +71,7 @@ group :production do
   gem 'pg'
 end
 
+gem "sentry-raven"
 
 gem 'chosen-rails'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
