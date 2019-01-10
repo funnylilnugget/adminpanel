@@ -5,19 +5,25 @@
 
   <div class="card">
     <div class="container">
-<p><b>Admin Name: </b><%=@admin.first_name%>
-  <%=@admin.last_name%></p>
-<p><b>User Name: </b>
-  <%=@admin.user_name%>
-  <p><b>Email: </b>
-    <%=@admin.email%></p>
-  </div>
-</div>
+      <p>
+        <b>Admin Name:
+        </b><%=@admin.first_name%>
+        <%=@admin.last_name%></p>
+      <p>
+        <b>User Name:
+        </b>
+        <%=@admin.user_name%>
+        <p>
+          <b>Email:
+          </b>
+          <%=@admin.email%></p>
+        <div class="button-center">
+          <%= link_to "Home", root_path, class: "button" %>
+          <%= link_to 'Edit', edit_admin_path(@admin), class: "button"%>
+        </div>
+      </div>
+    </div>
 
-<div></div>
-</div>
-<br>
-<div class="button-center">
-  <%= link_to "Home", root_path, class: "button" %>
-  <%= link_to 'Edit', edit_admin_path(@admin), class: "button"%>
-</div>
+    <div></div>
+  </div>
+  <br>

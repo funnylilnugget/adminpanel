@@ -3,22 +3,21 @@
 <div class="grid">
   <div></div>
 
-<div class="card">
-  <div class="container">
-  <%= form_for([@admin, @course]) do |f| %>
+  <div class="card">
+    <div class="container">
+      <%= form_for([@admin, @course]) do |f| %>
 
-  <h3><%= f.label :name %></h3>
-  <%= f.text_field :name %><br>
+      <h3><%= f.label :name %></h3>
+      <%= f.text_field :name %><br>
 
-  <h3><%= f.label :class_hours %></h3>
-  <%= f.number_field :class_hours %><br>
-<br><br>
-  </div>
+      <h3><%= f.label :class_hours %></h3>
+      <%= f.number_field :class_hours %><br>
+      <br><br>
+    </div>
+    <%= f.submit "Create Course", class: "button" %>
+    <br><br>
   </div>
   <div></div>
-  </div>
-  <br>
-  <div class="button-center">
-<%= f.submit "Create Course", class: "button" %>
 </div>
+
 <% end %>

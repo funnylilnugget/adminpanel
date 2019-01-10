@@ -24,11 +24,19 @@
 
         <%= link_to "Profile", admin_path(session[:user_id]) %>
         <%= link_to "Logout", logout_path %>
-<br>
-        <a href="<%=admin_students_path(session[:user_id])%>"><i class="fas fa-user"></i> Students</a>
-        <a href="<%=admin_teachers_path(session[:user_id])%>"><i class="fas fa-user-graduate"></i> Teachers</a>
-        <a href="<%=admin_courses_path(session[:user_id])%>"><i class="fas fa-chalkboard"></i> Courses</a>
-        <a href="<%=admin_cohorts_path(session[:user_id])%>"><i class="fas fa-chalkboard-teacher"></i> Cohorts</a>
+        <br>
+        <a href="<%=admin_students_path(session[:user_id])%>">
+          <i class="fas fa-user"></i>
+          Students</a>
+        <a href="<%=admin_teachers_path(session[:user_id])%>">
+          <i class="fas fa-user-graduate"></i>
+          Teachers</a>
+        <a href="<%=admin_courses_path(session[:user_id])%>">
+          <i class="fas fa-chalkboard"></i>
+          Courses</a>
+        <a href="<%=admin_cohorts_path(session[:user_id])%>">
+          <i class="fas fa-chalkboard-teacher"></i>
+          Cohorts</a>
 
         <center><img id="principal-pic" src="/assets/Nezu_Full_Body.png"></center>
       </div>
@@ -38,7 +46,9 @@
       <%= yield %>
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
 
   </body>
 </html>

@@ -1,17 +1,17 @@
 <h1>Welcome to the U.A. Admin Panel</h1>
 
 <% if session[:user_id] == nil %>
-<div class="button-center">
-<%= link_to "Login", login_path, class: "button" %>
-<%= link_to "Create Account", new_admin_path, class: "button" %>
-</div>
+  <div class="button-center">
+    <%= link_to "Login", login_path, class: "button" %>
+    <%= link_to "Create Account", new_admin_path, class: "button" %>
+  </div>
 <% else %>
 
-<h1>U.A. Highschool</h1>
+  <h1>U.A. Highschool</h1>
 
-<h2>U.A. is the #1 ranked high school for heroics and is considered as the top Hero Academy in the world. Students are separated into specific departments and classes, allowing students to decide what is the best way they can utilize themselves for their probable entry into the pro-hero world.</h2>
-<br>
-<center><img src="/assets/Yuuei_Building.png"></center>
-
+  <h2>U.A. is the #1 ranked high school for heroics and is considered as the top Hero Academy in the world. Students are separated into specific departments and classes, allowing students to decide what is the best way they can utilize themselves for
+    their probable entry into the pro-hero world.</h2>
+  <br>
+  <center><img src="/assets/Yuuei_Building.png"></center>
 
 <% end %>

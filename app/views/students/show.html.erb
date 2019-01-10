@@ -18,12 +18,11 @@
         <h3>Education:</h3>
         <p><%=@student.education%></p>
       </div>
+      <div class="button-center">
+        <%= link_to "Home", root_path, class: "button" %>
+        <%= link_to 'Edit', edit_admin_student_path(session[:user_id]), class: "button" %>
+      </div>
     </div>
 
     <div></div>
-  </div>
-  <br>
-  <div class="button-center">
-    <%= link_to "Home", root_path, class: "button" %>
-    <%= link_to 'Edit', edit_admin_student_path(session[:user_id]), class: "button" %>
   </div>

@@ -20,12 +20,10 @@
       <h3>Education:</h3>
       <p><%=@teacher.education%></p>
     </div>
+    <%= link_to "Home", root_path, class: "button" %>
+    <%= link_to 'Edit', edit_admin_teacher_path(session[:user_id]), class: "button"%>
+    <br><br>
   </div>
 
   <div></div>
-</div>
-<br>
-<div class="button-center">
-  <%= link_to "Home", root_path, class: "button" %>
-  <%= link_to 'Edit', edit_admin_teacher_path(session[:user_id]), class: "button"%>
 </div>

@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
     @student = Student.new(students_params)
     if @student.valid?
       @student.save
+      flash[:notice] = "Student successfully created"
       redirect_to admin_students_path
     else
       render 'new'

@@ -1,5 +1,5 @@
 class AdminsController < ApplicationController
-  
+
   def new
     @admin = Admin.new
   end
@@ -8,7 +8,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admins_params)
     if @admin.valid?
       @admin.save
-      redirect_to admin_path(@admin)
+      redirect_to root_path
     else
       render 'new'
     end

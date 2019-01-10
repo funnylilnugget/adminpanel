@@ -1,35 +1,36 @@
-<h2> Edit <%= @cohort.name %> </h2>
+<h2>
+  Edit
+  <%= @cohort.name %>
+</h2>
 
 <div class="grid">
   <div></div>
 
-<div class="card">
-  <div class="container">
-<%= form_for ([@admin, @cohort]) do |f| %>
+  <div class="card">
+    <div class="container">
+      <%= form_for ([@admin, @cohort]) do |f| %>
 
-  <h3><%= f.label :name %></h3>
-  <%= f.text_field :name %>
+      <h3><%= f.label :name %></h3>
+      <%= f.text_field :name %>
 
-  <h3><%= f.label :start_date %></h3>
-  <%= f.date_field :start_date %>
+      <h3><%= f.label :start_date %></h3>
+      <%= f.date_field :start_date %>
 
-  <h3><%= f.label :end_date %></h3>
-  <%= f.date_field :end_date %>
+      <h3><%= f.label :end_date %></h3>
+      <%= f.date_field :end_date %>
 
-  <h3><%= f.label :course %></h3>
-  <%= f.select(:course_id, Course.all.collect { |course| [course.name, course.id]},{include_blank: true }) %><br>
+      <h3><%= f.label :course %></h3>
+      <%= f.select(:course_id, Course.all.collect { |course| [course.name, course.id]},{include_blank: true }) %><br>
 
-  <h3><%= f.label :teacher %></h3>
-<%= f.collection_select(:teacher_id, Teacher.all, :id, :hero_name) %>
-  <h3><%= f.label :student %></h3>
-  <%= collection_check_boxes(:cohort, :student_ids, Student.all, :id, :hero_name) %><br>
-</div>
-</div>
-
-<div></div>
-</div>
-<br>
-<div class="button-center">
-  <%= f.submit 'Submit', class: "button"%>
+      <h3><%= f.label :teacher %></h3>
+      <%= f.collection_select(:teacher_id, Teacher.all, :id, :hero_name) %>
+      <h3><%= f.label :student %></h3>
+      <%= collection_check_boxes(:cohort, :student_ids, Student.all, :id, :hero_name) %><br>
+    </div>
+    <%= f.submit 'Submit', class: "button"%>
   </div>
+  <br>
+
+  <div></div>
+</div>
 <% end %>

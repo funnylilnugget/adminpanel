@@ -1,32 +1,45 @@
-<h1> Edit <%= @teacher.first_name %> <%= @teacher.last_name %> </h1>
+<h1>
+  Edit
+  <%= @teacher.first_name %>
+  <%= @teacher.last_name %>
+</h1>
 
-<%= form_for ([@admin, @teacher]) do |f| %>
+<div class="grid">
+  <div></div>
 
-<p><%= f.label :first_name %></p>
-<%= f.text_field :first_name %><br>
+  <div class="card">
+    <div class="container">
+      <%= form_for ([@admin, @teacher]) do |f| %>
 
-<p><%= f.label :last_name %></p>
-<%= f.text_field :last_name %><br>
+      <h3><%= f.label :first_name %></h3>
+      <%= f.text_field :first_name %><br>
 
-<p><%= f.label :age %></p>
-<%= f.number_field :age %><br>
+      <h3><%= f.label :last_name %></h3>
+      <%= f.text_field :last_name %><br>
 
-<p><%= f.label :salary %></p>
-<%= f.number_field :salary %><br>
+      <h3><%= f.label :age %></h3>
+      <%= f.number_field :age %><br>
 
-<p><%= f.label :hero_name %></p>
-<%= f.text_field :hero_name %><br>
+      <h3><%= f.label :salary %></h3>
+      <%= f.number_field :salary %><br>
 
-<p><%= f.label :quirk %></p>
-<%= f.text_field :quirk %><br>
+      <h3><%= f.label :hero_name %></h3>
+      <%= f.text_field :hero_name %><br>
 
-<p><%= f.label :education %></p>
-<%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
+      <h3><%= f.label :quirk %></h3>
+      <%= f.text_field :quirk %><br>
 
-<h5><%= f.label :avatar %></h5>
-<%= f.file_field :avatar, direct_upload: true %><br><br>
+      <h3><%= f.label :education %></h3>
+      <%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
 
+      <h3><%= f.label :avatar %></h3>
+      <%= f.file_field :avatar, direct_upload: true %><br><br>
+    </div>
+    <%= f.submit "Submit", class: "button" %>
+    <br>
+  </div>
 
-<%= f.submit "Submit" %>
+  <div></div>
+</div>
 
 <% end %>
