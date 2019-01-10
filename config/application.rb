@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+end
+
 module Adminpanel
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -16,8 +20,4 @@ module Adminpanel
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
-end
-
-Raven.configure do |config|
-  config.dsn = 'https://eccc2869f6ee43b18b4cae8062934cc3:5e9d455858e348d89a92a7548a85b0fc@sentry.io/1367060'
 end
