@@ -70,3 +70,7 @@ gem "google-cloud-storage", "~> 1.8", require: false
 group :production do
   gem 'pg'
 end
+
+
+gem 'chosen-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'

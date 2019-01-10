@@ -14,6 +14,10 @@
 //= require activestorage
 //= require turbolinks
 // = require_tree .
+//= require jquery
+//= require chosen-jquery
+//= require cohorts
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

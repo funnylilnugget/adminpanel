@@ -23,12 +23,8 @@
       <%= f.select(:teacher_id, Teacher.all.collect { |teacher| ["#{teacher.id} #{teacher.hero_name}"]},{include_blank: true }) %><br>
 
       <h3><%= f.label :student %></h3>
-      <%= f.collection_check_boxes :student_ids, Student.all, :id, :hero_name do |student| %>
-      <div>
-        <%= student.check_box %>
-        <%= student.label %>
-      </div>
-    <%end%>
+       <%= f.collection_select :student_ids, Student.order(:hero_name), :id, :hero_name, {}, { multiple: true, class: 'chosen-select' } %>
+
     <br><br>
     <%= f.submit "Create Cohort", class: "button" %>
   </div>
@@ -37,4 +33,4 @@
 <div></div>
 </div>
 
-<% end %>
+<%end%>

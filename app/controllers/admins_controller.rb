@@ -8,6 +8,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admins_params)
     if @admin.valid?
       @admin.save
+      log_in @admin
       redirect_to root_path
     else
       render 'new'
